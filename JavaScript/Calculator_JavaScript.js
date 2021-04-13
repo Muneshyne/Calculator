@@ -70,9 +70,13 @@ function Handle_Operator(Next_Operator) {
 
     const Perform_Calculation = {
         '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
+
         '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
+        
         '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
+        
         '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+        
         '=': (First_Operand, Second_Operand) => Second_Operand
     };
 
@@ -99,6 +103,7 @@ function Handle_Operator(Next_Operator) {
         if (!target.matches('button')) {
             return;
         }
+
         if (target.classList.contains('operator')) {
             Handle_Operator(target.value);
             Update_Display();
